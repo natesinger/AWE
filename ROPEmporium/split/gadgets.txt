@@ -1,0 +1,641 @@
+  0x00400284                 98  cwde
+  0x00400285               755e  jne 0x4002e5
+  0x00400287             64e1d0  loope 0x40025a
+  0x0040028a     c1bff48fccae1d  sar dword [rdi - 0x5133700c], 0x1d
+  0x00400291             ca9ee9  retf 0xe99e
+
+  0x00400286                 5e  pop rsi
+  0x00400287             64e1d0  loope 0x40025a
+  0x0040028a     c1bff48fccae1d  sar dword [rdi - 0x5133700c], 0x1d
+  0x00400291             ca9ee9  retf 0xe99e
+
+  0x00400288               e1d0  loope 0x40025a
+  0x0040028a     c1bff48fccae1d  sar dword [rdi - 0x5133700c], 0x1d
+  0x00400291             ca9ee9  retf 0xe99e
+
+  0x00400292                 9e  sahf
+  0x00400293         e9e3c609e2  jmp 0xffffffffe249c97b
+
+  0x00400528           4883ec08  sub rsp, 8
+  0x0040052c     488b05c50a2000  mov rax, qword [rip + 0x200ac5]
+  0x00400533             4885c0  test rax, rax
+  0x00400536               7402  je 0x40053a
+  0x00400538               ffd0  call rax
+
+  0x00400529             83ec08  sub esp, 8
+  0x0040052c     488b05c50a2000  mov rax, qword [rip + 0x200ac5]
+  0x00400533             4885c0  test rax, rax
+  0x00400536               7402  je 0x40053a
+  0x00400538               ffd0  call rax
+
+  0x0040052b             08488b  or byte [rax - 0x75], cl
+  0x0040052e         05c50a2000  add eax, 0x200ac5
+  0x00400533             4885c0  test rax, rax
+  0x00400536               7402  je 0x40053a
+  0x00400538               ffd0  call rax
+
+  0x0040052d       8b05c50a2000  mov eax, dword [rip + 0x200ac5]
+  0x00400533             4885c0  test rax, rax
+  0x00400536               7402  je 0x40053a
+  0x00400538               ffd0  call rax
+
+  0x00400531               2000  and byte [rax], al
+  0x00400533             4885c0  test rax, rax
+  0x00400536               7402  je 0x40053a
+  0x00400538               ffd0  call rax
+
+  0x00400534               85c0  test eax, eax
+  0x00400536               7402  je 0x40053a
+  0x00400538               ffd0  call rax
+
+  0x00400530               0a20  or ah, byte [rax]
+  0x00400532             004885  add byte [rax - 0x7b], cl
+  0x00400535         c07402ffd0  sal byte [rdx + rax - 1], 0xd0
+  0x0040053a           4883c408  add rsp, 8
+  0x0040053e                 c3  ret
+
+  0x0040053b             83c408  add esp, 8
+  0x0040053e                 c3  ret
+
+  0x0040053d               08c3  or bl, al
+  0x0040053f               00ff  add bh, bh
+  0x00400541         35c20a2000  xor eax, 0x200ac2
+  0x00400546       ff25c40a2000  jmp qword [rip + 0x200ac4]
+
+  0x00400540       ff35c20a2000  push qword [rip + 0x200ac2]
+  0x00400546       ff25c40a2000  jmp qword [rip + 0x200ac4]
+
+  0x00400544               2000  and byte [rax], al
+  0x00400546       ff25c40a2000  jmp qword [rip + 0x200ac4]
+
+  0x00400543               0a20  or ah, byte [rax]
+  0x00400545               00ff  add bh, bh
+  0x00400547         25c40a2000  and eax, 0x200ac4
+  0x0040054c           0f1f4000  nop dword [rax]
+  0x00400550       ff25c20a2000  jmp qword [rip + 0x200ac2]
+
+  0x0040054a               2000  and byte [rax], al
+  0x0040054c           0f1f4000  nop dword [rax]
+  0x00400550       ff25c20a2000  jmp qword [rip + 0x200ac2]
+
+  0x0040054e             4000ff  add dil, dil
+  0x00400551         25c20a2000  and eax, 0x200ac2
+  0x00400556         6800000000  push 0
+  0x0040055b         e9e0ffffff  jmp 0x400540
+
+  0x0040054f               00ff  add bh, bh
+  0x00400551         25c20a2000  and eax, 0x200ac2
+  0x00400556         6800000000  push 0
+  0x0040055b         e9e0ffffff  jmp 0x400540
+
+  0x00400554               2000  and byte [rax], al
+  0x00400556         6800000000  push 0
+  0x0040055b         e9e0ffffff  jmp 0x400540
+
+  0x00400557               0000  add byte [rax], al
+  0x00400559               0000  add byte [rax], al
+  0x0040055b         e9e0ffffff  jmp 0x400540
+
+  0x00400561         25ba0a2000  and eax, 0x200aba
+  0x00400566         6801000000  push 1
+  0x0040056b         e9d0ffffff  jmp 0x400540
+
+  0x00400562         ba0a200068  mov edx, 0x6800200a
+  0x00400567               0100  add dword [rax], eax
+  0x00400569               0000  add byte [rax], al
+  0x0040056b         e9d0ffffff  jmp 0x400540
+
+  0x00400564               2000  and byte [rax], al
+  0x00400566         6801000000  push 1
+  0x0040056b         e9d0ffffff  jmp 0x400540
+
+  0x00400571         25b20a2000  and eax, 0x200ab2
+  0x00400576         6802000000  push 2
+  0x0040057b         e9c0ffffff  jmp 0x400540
+
+  0x00400572               b20a  mov dl, 0xa
+  0x00400574               2000  and byte [rax], al
+  0x00400576         6802000000  push 2
+  0x0040057b         e9c0ffffff  jmp 0x400540
+
+  0x00400577               0200  add al, byte [rax]
+  0x00400579               0000  add byte [rax], al
+  0x0040057b         e9c0ffffff  jmp 0x400540
+
+  0x00400581         25aa0a2000  and eax, 0x200aaa
+  0x00400586         6803000000  push 3
+  0x0040058b         e9b0ffffff  jmp 0x400540
+
+  0x00400584               2000  and byte [rax], al
+  0x00400586         6803000000  push 3
+  0x0040058b         e9b0ffffff  jmp 0x400540
+
+  0x00400587               0300  add eax, dword [rax]
+  0x00400589               0000  add byte [rax], al
+  0x0040058b         e9b0ffffff  jmp 0x400540
+
+  0x00400591         25a20a2000  and eax, 0x200aa2
+  0x00400596         6804000000  push 4
+  0x0040059b         e9a0ffffff  jmp 0x400540
+
+  0x00400592 a20a20006804000000  movabs byte [0x46800200a], al
+  0x0040059b         e9a0ffffff  jmp 0x400540
+
+  0x00400594               2000  and byte [rax], al
+  0x00400596         6804000000  push 4
+  0x0040059b         e9a0ffffff  jmp 0x400540
+
+  0x00400597               0400  add al, 0
+  0x00400599               0000  add byte [rax], al
+  0x0040059b         e9a0ffffff  jmp 0x400540
+
+  0x004005a1         259a0a2000  and eax, 0x200a9a
+  0x004005a6         6805000000  push 5
+  0x004005ab         e990ffffff  jmp 0x400540
+
+  0x004005a4               2000  and byte [rax], al
+  0x004005a6         6805000000  push 5
+  0x004005ab         e990ffffff  jmp 0x400540
+
+  0x004005a9               0000  add byte [rax], al
+  0x004005ab         e990ffffff  jmp 0x400540
+
+  0x004005be                 54  push rsp
+  0x004005bf     49c7c0d0074000  mov r8, 0x4007d0
+  0x004005c6     48c7c160074000  mov rcx, 0x400760
+  0x004005cd     48c7c797064000  mov rdi, 0x400697
+  0x004005d4       ff15160a2000  call qword [rip + 0x200a16]
+
+  0x004005c0       c7c0d0074000  mov eax, 0x4007d0
+  0x004005c6     48c7c160074000  mov rcx, 0x400760
+  0x004005cd     48c7c797064000  mov rdi, 0x400697
+  0x004005d4       ff15160a2000  call qword [rip + 0x200a16]
+
+  0x004005c7       c7c160074000  mov ecx, 0x400760
+  0x004005cd     48c7c797064000  mov rdi, 0x400697
+  0x004005d4       ff15160a2000  call qword [rip + 0x200a16]
+
+  0x004005ce       c7c797064000  mov edi, 0x400697
+  0x004005d4       ff15160a2000  call qword [rip + 0x200a16]
+
+  0x004005d2             4000ff  add dil, dil
+  0x004005d5         15160a2000  adc eax, 0x200a16
+  0x004005da                 f4  hlt
+
+  0x004005d3               00ff  add bh, bh
+  0x004005d5         15160a2000  adc eax, 0x200a16
+  0x004005da                 f4  hlt
+
+  0x004005d8               2000  and byte [rax], al
+  0x004005da                 f4  hlt
+
+  0x004005d7               0a20  or ah, byte [rax]
+  0x004005d9               00f4  add ah, dh
+  0x004005db         0f1f440000  nop dword [rax + rax]
+  0x004005e0               f3c3  repz ret
+
+  0x004005dd             440000  add byte [rax], r8b
+  0x004005e0               f3c3  repz ret
+
+  0x004005de               0000  add byte [rax], al
+  0x004005e0               f3c3  repz ret
+
+  0x004005df               00f3  add bl, dh
+  0x004005e1                 c3  ret
+
+  0x00400606             4885c0  test rax, rax
+  0x00400609               740d  je 0x400618
+  0x0040060b                 5d  pop rbp
+  0x0040060c         bf78106000  mov edi, 0x601078
+  0x00400611               ffe0  jmp rax
+
+  0x00400607               85c0  test eax, eax
+  0x00400609               740d  je 0x400618
+  0x0040060b                 5d  pop rbp
+  0x0040060c         bf78106000  mov edi, 0x601078
+  0x00400611               ffe0  jmp rax
+
+  0x0040060e             106000  adc byte [rax], ah
+  0x00400611               ffe0  jmp rax
+
+  0x00400615             440000  add byte [rax], r8b
+  0x00400618                 5d  pop rbp
+  0x00400619                 c3  ret
+
+  0x00400616               0000  add byte [rax], al
+  0x00400618                 5d  pop rbp
+  0x00400619                 c3  ret
+
+  0x00400648             4885c0  test rax, rax
+  0x0040064b               740b  je 0x400658
+  0x0040064d                 5d  pop rbp
+  0x0040064e         bf78106000  mov edi, 0x601078
+  0x00400653               ffe0  jmp rax
+
+  0x00400649               85c0  test eax, eax
+  0x0040064b               740b  je 0x400658
+  0x0040064d                 5d  pop rbp
+  0x0040064e         bf78106000  mov edi, 0x601078
+  0x00400653               ffe0  jmp rax
+
+  0x00400650             106000  adc byte [rax], ah
+  0x00400653               ffe0  jmp rax
+
+  0x00400658                 5d  pop rbp
+  0x00400659                 c3  ret
+
+  0x00400660     803d190a200000  cmp byte [rip + 0x200a19], 0
+  0x00400667               7517  jne 0x400680
+  0x00400669                 55  push rbp
+  0x0040066a             4889e5  mov rbp, rsp
+  0x0040066d         e87effffff  call 0x4005f0
+
+  0x00400661         3d190a2000  cmp eax, 0x200a19
+  0x00400666             007517  add byte [rbp + 0x17], dh
+  0x00400669                 55  push rbp
+  0x0040066a             4889e5  mov rbp, rsp
+  0x0040066d         e87effffff  call 0x4005f0
+
+  0x00400664               2000  and byte [rax], al
+  0x00400666             007517  add byte [rbp + 0x17], dh
+  0x00400669                 55  push rbp
+  0x0040066a             4889e5  mov rbp, rsp
+  0x0040066d         e87effffff  call 0x4005f0
+
+  0x00400665               0000  add byte [rax], al
+  0x00400667               7517  jne 0x400680
+  0x00400669                 55  push rbp
+  0x0040066a             4889e5  mov rbp, rsp
+  0x0040066d         e87effffff  call 0x4005f0
+
+  0x0040066b               89e5  mov ebp, esp
+  0x0040066d         e87effffff  call 0x4005f0
+
+  0x00400672     c605070a200001  mov byte [rip + 0x200a07], 1
+  0x00400679                 5d  pop rbp
+  0x0040067a                 c3  ret
+
+  0x00400675               0a20  or ah, byte [rax]
+  0x00400677               0001  add byte [rcx], al
+  0x00400679                 5d  pop rbp
+  0x0040067a                 c3  ret
+
+  0x00400671               ffc6  inc esi
+  0x00400673         05070a2000  add eax, 0x200a07
+  0x00400678             015dc3  add dword [rbp - 0x3d], ebx
+  0x0040067b         0f1f440000  nop dword [rax + rax]
+  0x00400680               f3c3  repz ret
+
+  0x00400676               2000  and byte [rax], al
+  0x00400678             015dc3  add dword [rbp - 0x3d], ebx
+  0x0040067b         0f1f440000  nop dword [rax + rax]
+  0x00400680               f3c3  repz ret
+
+  0x0040067d             440000  add byte [rax], r8b
+  0x00400680               f3c3  repz ret
+
+  0x0040067e               0000  add byte [rax], al
+  0x00400680               f3c3  repz ret
+
+  0x0040067f               00f3  add bl, dh
+  0x00400681                 c3  ret
+
+  0x0040068d               0000  add byte [rax], al
+  0x0040068f             005548  add byte [rbp + 0x48], dl
+  0x00400692               89e5  mov ebp, esp
+  0x00400694                 5d  pop rbp
+  0x00400695               eb89  jmp 0x400620
+
+  0x0040068e               0000  add byte [rax], al
+  0x00400690                 55  push rbp
+  0x00400691             4889e5  mov rbp, rsp
+  0x00400694                 5d  pop rbp
+  0x00400695               eb89  jmp 0x400620
+
+  0x00400693               e55d  in eax, 0x5d
+  0x00400695               eb89  jmp 0x400620
+
+  0x004006a1       00b900000000  add byte [rcx], bh
+  0x004006a7         ba02000000  mov edx, 2
+  0x004006ac         be00000000  mov esi, 0
+  0x004006b1             4889c7  mov rdi, rax
+  0x004006b4         e8e7feffff  call 0x4005a0
+
+  0x004006a2         b900000000  mov ecx, 0
+  0x004006a7         ba02000000  mov edx, 2
+  0x004006ac         be00000000  mov esi, 0
+  0x004006b1             4889c7  mov rdi, rax
+  0x004006b4         e8e7feffff  call 0x4005a0
+
+  0x004006a4               0000  add byte [rax], al
+  0x004006a6       00ba02000000  add byte [rdx + 2], bh
+  0x004006ac         be00000000  mov esi, 0
+  0x004006b1             4889c7  mov rdi, rax
+  0x004006b4         e8e7feffff  call 0x4005a0
+
+  0x004006a5               0000  add byte [rax], al
+  0x004006a7         ba02000000  mov edx, 2
+  0x004006ac         be00000000  mov esi, 0
+  0x004006b1             4889c7  mov rdi, rax
+  0x004006b4         e8e7feffff  call 0x4005a0
+
+  0x004006a8               0200  add al, byte [rax]
+  0x004006aa               0000  add byte [rax], al
+  0x004006ac         be00000000  mov esi, 0
+  0x004006b1             4889c7  mov rdi, rax
+  0x004006b4         e8e7feffff  call 0x4005a0
+
+  0x004006a9               0000  add byte [rax], al
+  0x004006ab       00be00000000  add byte [rsi], bh
+  0x004006b1             4889c7  mov rdi, rax
+  0x004006b4         e8e7feffff  call 0x4005a0
+
+  0x004006ad               0000  add byte [rax], al
+  0x004006af               0000  add byte [rax], al
+  0x004006b1             4889c7  mov rdi, rax
+  0x004006b4         e8e7feffff  call 0x4005a0
+
+  0x004006b2               89c7  mov edi, eax
+  0x004006b4         e8e7feffff  call 0x4005a0
+
+  0x004006b9         bfe8074000  mov edi, 0x4007e8
+  0x004006be         e88dfeffff  call 0x400550
+
+  0x004006c3         bffe074000  mov edi, 0x4007fe
+  0x004006c8         e883feffff  call 0x400550
+
+  0x004006cd         b800000000  mov eax, 0
+  0x004006d2         e811000000  call 0x4006e8
+
+  0x004006ce               0000  add byte [rax], al
+  0x004006d0               0000  add byte [rax], al
+  0x004006d2         e811000000  call 0x4006e8
+
+  0x004006d1               00e8  add al, ch
+  0x004006d3               1100  adc dword [rax], eax
+  0x004006d5               0000  add byte [rax], al
+  0x004006d7         bf06084000  mov edi, 0x400806
+  0x004006dc         e86ffeffff  call 0x400550
+
+  0x004006d4               0000  add byte [rax], al
+  0x004006d6       00bf06084000  add byte [rdi + 0x400806], bh
+  0x004006dc         e86ffeffff  call 0x400550
+
+  0x004006d9             084000  or byte [rax], al
+  0x004006dc         e86ffeffff  call 0x400550
+
+  0x004006e1         b800000000  mov eax, 0
+  0x004006e6                 5d  pop rbp
+  0x004006e7                 c3  ret
+
+  0x004006e2               0000  add byte [rax], al
+  0x004006e4               0000  add byte [rax], al
+  0x004006e6                 5d  pop rbp
+  0x004006e7                 c3  ret
+
+  0x004006f0           488d45e0  lea rax, [rbp - 0x20]
+  0x004006f4         ba20000000  mov edx, 0x20
+  0x004006f9         be00000000  mov esi, 0
+  0x004006fe             4889c7  mov rdi, rax
+  0x00400701         e87afeffff  call 0x400580
+
+  0x004006f1             8d45e0  lea eax, [rbp - 0x20]
+  0x004006f4         ba20000000  mov edx, 0x20
+  0x004006f9         be00000000  mov esi, 0
+  0x004006fe             4889c7  mov rdi, rax
+  0x00400701         e87afeffff  call 0x400580
+
+  0x004006f5               2000  and byte [rax], al
+  0x004006f7               0000  add byte [rax], al
+  0x004006f9         be00000000  mov esi, 0
+  0x004006fe             4889c7  mov rdi, rax
+  0x00400701         e87afeffff  call 0x400580
+
+  0x004006f6               0000  add byte [rax], al
+  0x004006f8       00be00000000  add byte [rsi], bh
+  0x004006fe             4889c7  mov rdi, rax
+  0x00400701         e87afeffff  call 0x400580
+
+  0x004006fa               0000  add byte [rax], al
+  0x004006fc               0000  add byte [rax], al
+  0x004006fe             4889c7  mov rdi, rax
+  0x00400701         e87afeffff  call 0x400580
+
+  0x004006ff               89c7  mov edi, eax
+  0x00400701         e87afeffff  call 0x400580
+
+  0x00400706         bf10084000  mov edi, 0x400810
+  0x0040070b         e840feffff  call 0x400550
+
+  0x00400708             084000  or byte [rax], al
+  0x0040070b         e840feffff  call 0x400550
+
+  0x00400710         bf3c084000  mov edi, 0x40083c
+  0x00400715         b800000000  mov eax, 0
+  0x0040071a         e851feffff  call 0x400570
+
+  0x00400711               3c08  cmp al, 8
+  0x00400713     4000b800000000  add byte [rax], dil
+  0x0040071a         e851feffff  call 0x400570
+
+  0x00400712             084000  or byte [rax], al
+  0x00400715         b800000000  mov eax, 0
+  0x0040071a         e851feffff  call 0x400570
+
+  0x00400714       00b800000000  add byte [rax], bh
+  0x0040071a         e851feffff  call 0x400570
+
+  0x00400716               0000  add byte [rax], al
+  0x00400718               0000  add byte [rax], al
+  0x0040071a         e851feffff  call 0x400570
+
+  0x0040071f           488d45e0  lea rax, [rbp - 0x20]
+  0x00400723         ba60000000  mov edx, 0x60
+  0x00400728             4889c6  mov rsi, rax
+  0x0040072b         bf00000000  mov edi, 0
+  0x00400730         e85bfeffff  call 0x400590
+
+  0x00400720             8d45e0  lea eax, [rbp - 0x20]
+  0x00400723         ba60000000  mov edx, 0x60
+  0x00400728             4889c6  mov rsi, rax
+  0x0040072b         bf00000000  mov edi, 0
+  0x00400730         e85bfeffff  call 0x400590
+
+  0x00400726               0000  add byte [rax], al
+  0x00400728             4889c6  mov rsi, rax
+  0x0040072b         bf00000000  mov edi, 0
+  0x00400730         e85bfeffff  call 0x400590
+
+  0x00400729               89c6  mov esi, eax
+  0x0040072b         bf00000000  mov edi, 0
+  0x00400730         e85bfeffff  call 0x400590
+
+  0x0040072c               0000  add byte [rax], al
+  0x0040072e               0000  add byte [rax], al
+  0x00400730         e85bfeffff  call 0x400590
+
+  0x00400735         bf3f084000  mov edi, 0x40083f
+  0x0040073a         e811feffff  call 0x400550
+
+  0x00400737             084000  or byte [rax], al
+  0x0040073a         e811feffff  call 0x400550
+
+  0x00400740                 c9  leave
+  0x00400741                 c3  ret
+
+  0x00400742                 55  push rbp
+  0x00400743             4889e5  mov rbp, rsp
+  0x00400746         bf4a084000  mov edi, 0x40084a
+  0x0040074b         e810feffff  call 0x400560
+
+  0x00400744               89e5  mov ebp, esp
+  0x00400746         bf4a084000  mov edi, 0x40084a
+  0x0040074b         e810feffff  call 0x400560
+
+  0x00400745               e5bf  in eax, 0xbf
+  0x00400747           4a084000  or byte [rax], al
+  0x0040074b         e810feffff  call 0x400560
+
+  0x00400748             084000  or byte [rax], al
+  0x0040074b         e810feffff  call 0x400560
+
+  0x00400751                 5d  pop rbp
+  0x00400752                 c3  ret
+
+  0x0040077e             4989f6  mov r14, rsi
+  0x00400781             4c29e5  sub rbp, r12
+  0x00400784           4883ec08  sub rsp, 8
+  0x00400788           48c1fd03  sar rbp, 3
+  0x0040078c         e897fdffff  call 0x400528
+
+  0x0040077f               89f6  mov esi, esi
+  0x00400781             4c29e5  sub rbp, r12
+  0x00400784           4883ec08  sub rsp, 8
+  0x00400788           48c1fd03  sar rbp, 3
+  0x0040078c         e897fdffff  call 0x400528
+
+  0x00400780         f64c29e548  test byte [rcx + rbp - 0x1b], 0x48
+  0x00400785             83ec08  sub esp, 8
+  0x00400788           48c1fd03  sar rbp, 3
+  0x0040078c         e897fdffff  call 0x400528
+
+  0x00400782               29e5  sub ebp, esp
+  0x00400784           4883ec08  sub rsp, 8
+  0x00400788           48c1fd03  sar rbp, 3
+  0x0040078c         e897fdffff  call 0x400528
+
+  0x00400783               e548  in eax, 0x48
+  0x00400785             83ec08  sub esp, 8
+  0x00400788           48c1fd03  sar rbp, 3
+  0x0040078c         e897fdffff  call 0x400528
+
+  0x00400789             c1fd03  sar ebp, 3
+  0x0040078c         e897fdffff  call 0x400528
+
+  0x0040079d               0000  add byte [rax], al
+  0x0040079f           004c89fa  add byte [rcx + rcx*4 - 6], cl
+  0x004007a3             4c89f6  mov rsi, r14
+  0x004007a6             4489ef  mov edi, r13d
+  0x004007a9           41ff14dc  call qword [r12 + rbx*8]
+
+  0x0040079e               0000  add byte [rax], al
+  0x004007a0             4c89fa  mov rdx, r15
+  0x004007a3             4c89f6  mov rsi, r14
+  0x004007a6             4489ef  mov edi, r13d
+  0x004007a9           41ff14dc  call qword [r12 + rbx*8]
+
+  0x004007a1               89fa  mov edx, edi
+  0x004007a3             4c89f6  mov rsi, r14
+  0x004007a6             4489ef  mov edi, r13d
+  0x004007a9           41ff14dc  call qword [r12 + rbx*8]
+
+  0x004007a2                 fa  cli
+  0x004007a3             4c89f6  mov rsi, r14
+  0x004007a6             4489ef  mov edi, r13d
+  0x004007a9           41ff14dc  call qword [r12 + rbx*8]
+
+  0x004007a4               89f6  mov esi, esi
+  0x004007a6             4489ef  mov edi, r13d
+  0x004007a9           41ff14dc  call qword [r12 + rbx*8]
+
+  0x004007a7               89ef  mov edi, ebp
+  0x004007a9           41ff14dc  call qword [r12 + rbx*8]
+
+  0x004007a8                 ef  out dx, eax
+  0x004007a9           41ff14dc  call qword [r12 + rbx*8]
+
+  0x004007a5         f64489ef41  test byte [rcx + rcx*4 - 0x11], 0x41
+  0x004007aa             ff14dc  call qword [rsp + rbx*8]
+
+  0x004007ac             dc4883  fmul qword [rax - 0x7d]
+  0x004007af                 c3  ret
+
+  0x004007bc               415c  pop r12
+  0x004007be               415d  pop r13
+  0x004007c0               415e  pop r14
+  0x004007c2               415f  pop r15
+  0x004007c4                 c3  ret
+
+  0x004007bd                 5c  pop rsp
+  0x004007be               415d  pop r13
+  0x004007c0               415e  pop r14
+  0x004007c2               415f  pop r15
+  0x004007c4                 c3  ret
+
+  0x004007bf                 5d  pop rbp
+  0x004007c0               415e  pop r14
+  0x004007c2               415f  pop r15
+  0x004007c4                 c3  ret
+
+  0x004007c1                 5e  pop rsi
+  0x004007c2               415f  pop r15
+  0x004007c4                 c3  ret
+
+  0x004007c3                 5f  pop rdi
+  0x004007c4                 c3  ret
+
+  0x004007ca               8400  test byte [rax], al
+  0x004007cc               0000  add byte [rax], al
+  0x004007ce               0000  add byte [rax], al
+  0x004007d0               f3c3  repz ret
+
+  0x004007cb               0000  add byte [rax], al
+  0x004007cd               0000  add byte [rax], al
+  0x004007cf               00f3  add bl, dh
+  0x004007d1                 c3  ret
+
+  0x004007d2               0000  add byte [rax], al
+  0x004007d4           4883ec08  sub rsp, 8
+  0x004007d8           4883c408  add rsp, 8
+  0x004007dc                 c3  ret
+
+  0x004007d5             83ec08  sub esp, 8
+  0x004007d8           4883c408  add rsp, 8
+  0x004007dc                 c3  ret
+
+  0x004007d9             83c408  add esp, 8
+  0x004007dc                 c3  ret
+
+  0x00400864                 a4  movsb byte [rdi], byte [rsi]
+  0x00400865               0000  add byte [rax], al
+  0x00400867           005cfdff  add byte [rbp + rdi*8 - 1], bl
+  0x0040086b           ff640000  jmp qword [rax + rax]
+
+  0x004008df       089001000010  or byte [rax + 0x10000001], dl
+  0x004008e5               0000  add byte [rax], al
+  0x004008e7             001c00  add byte [rax + rax], bl
+  0x004008ea               0000  add byte [rax], al
+  0x004008ec                 f4  hlt
+
+  0x004008e3               0010  add byte [rax], dl
+  0x004008e5               0000  add byte [rax], al
+  0x004008e7             001c00  add byte [rax + rax], bl
+  0x004008ea               0000  add byte [rax], al
+  0x004008ec                 f4  hlt
+
+  0x004008e4               1000  adc byte [rax], al
+  0x004008e6               0000  add byte [rax], al
+  0x004008e8               1c00  sbb al, 0
+  0x004008ea               0000  add byte [rax], al
+  0x004008ec                 f4  hlt
+

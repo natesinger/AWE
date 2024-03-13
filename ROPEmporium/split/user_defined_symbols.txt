@@ -1,0 +1,12 @@
+0x00601078 8 stdout
+0x00601080 1 completed.7698
+0x004006e8 90 pwnme
+0x00400742 17 usefulFunction
+0x004007d0 2 __libc_csu_fini
+0x00601078 8 stdout@@GLIBC_2.2.5
+0x004007e0 4 _IO_stdin_used
+0x00601060 18 usefulString
+0x00400760 101 __libc_csu_init
+0x004005e0 2 _dl_relocate_static_pie
+0x004005b0 43 _start
+0x00400697 81 main
